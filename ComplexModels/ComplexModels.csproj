@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BA06C1F9-EDB0-4D37-A426-0F12E81500B0}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ComplexModels</RootNamespace>
+    <AssemblyName>ComplexModels</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Address.cs">
+      <DependentUpon>ComplexModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BakedGood.cs">
+      <DependentUpon>TPH_Models.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ComplexModels.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ComplexModels.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ComplexModels.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ComplexModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ComplexModels.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ComplexModels.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer.cs">
+      <DependentUpon>ComplexModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PartitionModels.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PartitionModels.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PartitionModels.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PartitionModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PartitionModels.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PartitionModels.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Recipe.cs">
+      <DependentUpon>PartitionModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RecipeComponent.cs">
+      <DependentUpon>PartitionModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RecipeIngredient.cs">
+      <DependentUpon>PartitionModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SplitCustomer.cs">
+      <DependentUpon>SplitEntityModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SplitEntityModels.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SplitEntityModels.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SplitEntityModels.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SplitEntityModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SplitEntityModels.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SplitEntityModels.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Supplier.cs">
+      <DependentUpon>ComplexModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TPHRecipe.cs">
+      <DependentUpon>TPH_Models.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TPH_Models.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TPH_Models.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TPH_Models.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TPH_Models.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TPH_Models.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TPH_Models.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="TPTBakedGood.cs">
+      <DependentUpon>TPTModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TPTIngredient.cs">
+      <DependentUpon>TPTModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TPTModels.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TPTModels.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TPTModels.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TPTModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TPTModels.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TPTModels.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="TPTRecipe.cs">
+      <DependentUpon>TPTModels.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <EntityDeploy Include="ComplexModels.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ComplexModels.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ComplexModels.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ComplexModels.edmx</DependentUpon>
+      <LastGenOutput>ComplexModels.Context.cs</LastGenOutput>
+    </None>
+    <None Include="ComplexModels.edmx.diagram">
+      <DependentUpon>ComplexModels.edmx</DependentUpon>
+    </None>
+    <None Include="ComplexModels.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ComplexModels.edmx</DependentUpon>
+      <LastGenOutput>ComplexModels.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+    <EntityDeploy Include="SplitEntityModels.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>SplitEntityModels.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="PartitionModels.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>PartitionModels.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="PartitionModels.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PartitionModels.edmx</DependentUpon>
+      <LastGenOutput>PartitionModels.Context.cs</LastGenOutput>
+    </None>
+    <None Include="PartitionModels.edmx.diagram">
+      <DependentUpon>PartitionModels.edmx</DependentUpon>
+    </None>
+    <None Include="PartitionModels.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PartitionModels.edmx</DependentUpon>
+      <LastGenOutput>PartitionModels.cs</LastGenOutput>
+    </None>
+    <None Include="SplitEntityModels.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SplitEntityModels.edmx</DependentUpon>
+      <LastGenOutput>SplitEntityModels.Context.cs</LastGenOutput>
+    </None>
+    <None Include="SplitEntityModels.edmx.diagram">
+      <DependentUpon>SplitEntityModels.edmx</DependentUpon>
+    </None>
+    <None Include="SplitEntityModels.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SplitEntityModels.edmx</DependentUpon>
+      <LastGenOutput>SplitEntityModels.cs</LastGenOutput>
+    </None>
+    <EntityDeploy Include="TPTModels.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>TPTModels.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="TPH_Models.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>TPH_Models.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="TPH_Models.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TPH_Models.edmx</DependentUpon>
+      <LastGenOutput>TPH_Models.Context.cs</LastGenOutput>
+    </None>
+    <None Include="TPH_Models.edmx.diagram">
+      <DependentUpon>TPH_Models.edmx</DependentUpon>
+    </None>
+    <None Include="TPH_Models.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TPH_Models.edmx</DependentUpon>
+      <LastGenOutput>TPH_Models.cs</LastGenOutput>
+    </None>
+    <None Include="TPTModels.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TPTModels.edmx</DependentUpon>
+      <LastGenOutput>TPTModels.Context.cs</LastGenOutput>
+    </None>
+    <None Include="TPTModels.edmx.diagram">
+      <DependentUpon>TPTModels.edmx</DependentUpon>
+    </None>
+    <None Include="TPTModels.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TPTModels.edmx</DependentUpon>
+      <LastGenOutput>TPTModels.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

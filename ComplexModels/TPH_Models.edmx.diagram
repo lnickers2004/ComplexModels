@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="aee70229022942fcbbed65731df719ea" Name="Diagram1" DisplayType="true">
+        <EntityTypeShape EntityType="FluentEFChapter04_Model.TPHRecipe" Width="2.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FluentEFChapter04_Model.BakedGood" Width="2.625" PointX="0.5" PointY="4.25" />
+        <InheritanceConnector EntityType="FluentEFChapter04_Model.BakedGood" ManuallyRouted="false" >
+        </InheritanceConnector>
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
