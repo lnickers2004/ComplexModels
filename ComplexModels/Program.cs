@@ -10,6 +10,7 @@ namespace ComplexModels
 	{
 		static void Main( string[] args )
 		{
+
 		}
 	}
 }
